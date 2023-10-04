@@ -1,0 +1,610 @@
+[gd_scene load_steps=19 format=3 uid="uid://bun3yr7oo0yqf"]
+
+[ext_resource type="Script" path="res://scripts/Section2.gd" id="1_ij1mt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkbfd"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0.72549, 0.568627, 0.45098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxeli"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.45098, 0.470588, 0.72549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rfy7"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.32549, 0.34902, 0.65098, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_54a13"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tw217"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cicc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlykv"]
+content_margin_left = 48.0
+content_margin_top = 48.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(0.764706, 0.529412, 0.45098, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4m5e0"]
+bg_color = Color(0.45098, 0.529412, 0.72549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trrrs"]
+bg_color = Color(0.529412, 0.607843, 0.803922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jraju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf2w4"]
+bg_color = Color(0.235294, 0.25098, 0.266667, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70hfp"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_bottom = 6.0
+bg_color = Color(0.45098, 0.72549, 0.529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0om7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72tu1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1817c"]
+bg_color = Color(0.45098, 0.72549, 0.529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4ath"]
+bg_color = Color(0.529412, 0.803922, 0.607843, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cieyx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ij1mt")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tkbfd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 72)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxeli")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5rfy7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xxeli")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_54a13")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tw217")
+text = "BACK"
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72549, 0.705882, 0.45098, 1)
+theme_override_colors/font_shadow_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_outline_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 52
+text = "SAVE & LOAD"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cicc7")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlykv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Slot" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "Slot: Empty"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "Name: Player"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Color" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "Color: (0.13, 0.14, 0.16, 1)"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Health" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "Health: 100"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Slot1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "SLOT 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save1" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jraju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+text = "SAVE"
+
+[node name="Load1" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "LOAD"
+
+[node name="Erase1" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "ERASE"
+
+[node name="Slot2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "SLOT 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save2" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jraju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+text = "SAVE"
+
+[node name="Load2" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "LOAD"
+
+[node name="Erase2" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "ERASE"
+
+[node name="Slot3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "SLOT 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save3" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jraju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+text = "SAVE"
+
+[node name="Load3" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "LOAD"
+
+[node name="Erase3" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trrrs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4m5e0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yf2w4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jraju")
+disabled = true
+text = "ERASE"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="ChangeName" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeName"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "CHANGE NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeName"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_selected_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_uneditable_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_placeholder_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/caret_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_constants/caret_width = 4
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_70hfp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k0om7")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_k0om7")
+placeholder_text = "Player"
+max_length = 18
+caret_blink = true
+
+[node name="ChangeColor" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeColor"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "CHANGE COLOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeColor"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_72tu1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_72tu1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_72tu1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_72tu1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_72tu1")
+color = Color(0.12549, 0.141176, 0.156863, 1)
+
+[node name="ChangeHealth" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+text = "CHANGE HEALTH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Plus" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_1817c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a4ath")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1817c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cieyx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cieyx")
+text = "+ 10"
+
+[node name="Minus" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_1817c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a4ath")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1817c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cieyx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cieyx")
+text = "- 10"
+
+[node name="Reset" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(240, 72)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_disabled_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxeli")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5rfy7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xxeli")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_54a13")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tw217")
+text = "RESET TO DEFAULT"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1/Save1" to="." method="_on_save_1_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1/Load1" to="." method="_on_load_1_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot1/Erase1" to="." method="_on_erase_1_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2/Save2" to="." method="_on_save_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2/Load2" to="." method="_on_load_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot2/Erase2" to="." method="_on_erase_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3/Save3" to="." method="_on_save_3_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3/Load3" to="." method="_on_load_3_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Slot3/Erase3" to="." method="_on_erase_3_pressed"]
+[connection signal="text_changed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeName/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="color_changed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeColor/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth/HBoxContainer/Plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/ChangeHealth/HBoxContainer/Minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/Reset" to="." method="_on_reset_pressed"]

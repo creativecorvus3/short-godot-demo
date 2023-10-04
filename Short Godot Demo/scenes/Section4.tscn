@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://blejbpk25rt08"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni3w3"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0.72549, 0.568627, 0.45098, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ni3w3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72549, 0.705882, 0.45098, 1)
+theme_override_colors/font_outline_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "Random Number Generation"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.12549, 0.141176, 0.156863, 1)
+bbcode_enabled = true
+text = ">>> Random Integer
+var random_int = randi() % 10 + 1
+
+This gives a random number from 1 - 10 but there is an issue with this code... it always is predictable and will give the same number in the same order to fix this.
+
+RNG > 5
+RNG > 5
+
+randomize()
+var random_int = randi() % 10 + 1
+
+This will always give a different random number using a time-based seed so when you reboot the game the first number will not be the same
+
+RNG > 3
+RNG > 8
+
+>>> Random Float
+var random_float = randf() % 10 + 1
+
+RNG > 2.2
+
+>>> Weighted RNG
+var num = randf() % 1 + 0
+
+if num < 0.7:
+	# 70& chance or Common
+elif num < 0.9:
+	# 20% chance or Uncommon
+else:
+	# 10% chance or Rare
+
+RNG > 0.43 = Common
+RNG > 0.98 = Uncommon
+RNG > 1 = Rare"
+fit_content = true

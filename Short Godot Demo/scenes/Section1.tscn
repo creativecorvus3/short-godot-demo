@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://y0g3jdaoi54k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqaa3"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0.72549, 0.568627, 0.45098, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fqaa3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72549, 0.705882, 0.45098, 1)
+theme_override_colors/font_outline_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "Autoloads"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.12549, 0.141176, 0.156863, 1)
+bbcode_enabled = true
+text = "***
+[i]extends Node
+
+var section_0 = false
+var section_1 = false
+var section_2 = false
+var section_3 = false
+var section_4 = false
+
+var is_playing = false
+var is_paused = false
+var pause_menu = preload('res://scenes/PauseMenu.tscn')
+
+func _process(_delta):
+	if Input.is_action_just_pressed('ESC') and Autoload.is_playing == true and Autoload.is_paused == false:
+		Autoload.is_paused = true
+		var x = pause_menu.instantiate()
+		get_tree().current_scene.add_child(x)
+***
+
+This is an Autoload.gd script I have which is accessible for every scene. This is useful for scene transitioning, pause menu, sharing variable data across scenes, and more. 
+
+var section_0 = false (this code tells me in the SceneTransition.tscn) which scene to switch to. This can be more efficient but I have the animation and scene switching in the same function therefore it is a little inefficient, it is fine as this is a short game with only a few known scenes.
+
+***
+func change_scene_to_file(_scene):
+	if Autoload.section_0 == true:
+		get_tree().change_scene_to_file('res://scenes/Main.tscn')
+	if Autoload.section_1 == true:
+		get_tree().change_scene_to_file('res://scenes/Section1.tscn')
+***"
+fit_content = true
+autowrap_mode = 2

@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbxlslncp7n86"]
+
+[ext_resource type="Script" path="res://scripts/Pause.gd" id="1_qk2yh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1tcx"]
+content_margin_left = 48.0
+content_margin_top = 8.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(0.72549, 0.529412, 0.45098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwgvn"]
+content_margin_left = 32.0
+content_margin_top = 12.0
+content_margin_bottom = 14.0
+bg_color = Color(0.45098, 0.529412, 0.72549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3mkm"]
+content_margin_left = 32.0
+content_margin_top = 12.0
+content_margin_bottom = 14.0
+bg_color = Color(0.568627, 0.686275, 0.843137, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evkor"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qk2yh")
+
+[node name="P" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r1tcx")
+
+[node name="V" type="VBoxContainer" parent="P"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Label" type="Label" parent="P/V"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.784314, 0.784314, 0.392157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0470588, 0.0627451, 0.0784314, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 256
+text = "PAUSE MENU"
+
+[node name="Resume" type="Button" parent="P/V"]
+custom_minimum_size = Vector2(1120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e3mkm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_evkor")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_evkor")
+text = "RESUME"
+alignment = 0
+
+[node name="Main" type="Button" parent="P/V"]
+custom_minimum_size = Vector2(1120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e3mkm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_evkor")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_evkor")
+text = "QUIT TO TITLE"
+alignment = 0
+
+[node name="Quit" type="Button" parent="P/V"]
+custom_minimum_size = Vector2(1120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_focus_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e3mkm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lwgvn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_evkor")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_evkor")
+text = "QUIT TO DESKTOP"
+alignment = 0
+
+[connection signal="pressed" from="P/V/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="P/V/Main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="P/V/Quit" to="." method="_on_quit_pressed"]

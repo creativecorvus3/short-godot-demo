@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw67jxag5t8wf"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="2_ds8oo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7b114"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8xws"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.12549, 0.141176, 0.156863, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3dlt"]
+bg_color = Color(0.509804, 0.529412, 0.72549, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.12549, 0.141176, 0.156863, 1)
+
+[sub_resource type="Theme" id="Theme_ng505"]
+PopupMenu/colors/font_color = Color(0.12549, 0.141176, 0.156863, 1)
+PopupMenu/colors/font_hover_color = Color(0.12549, 0.141176, 0.156863, 1)
+PopupMenu/constants/h_separation = 0
+PopupMenu/font_sizes/font_size = 24
+PopupMenu/icons/radio_checked = SubResource("CompressedTexture2D_7b114")
+PopupMenu/icons/radio_checked_disabled = SubResource("CompressedTexture2D_7b114")
+PopupMenu/icons/radio_unchecked = SubResource("CompressedTexture2D_7b114")
+PopupMenu/icons/radio_unchecked_disabled = SubResource("CompressedTexture2D_7b114")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_l8xws")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_h3dlt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t4x7"]
+content_margin_left = 64.0
+content_margin_top = 64.0
+content_margin_right = 64.0
+content_margin_bottom = 64.0
+bg_color = Color(0.72549, 0.568627, 0.45098, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ng505")
+script = ExtResource("2_ds8oo")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7t4x7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 48
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72549, 0.705882, 0.45098, 1)
+theme_override_colors/font_shadow_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_colors/font_outline_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 64
+text = "Godot Learning Course (Short)"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.12549, 0.141176, 0.156863, 1)
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+bbcode_enabled = true
+text = "[i]This is my submission for the [Make an Open Source Project for Godot Jam] I decided to join to share some parts that I would have liked to know more about while I was learning Godot for the first time. Here is four parts of what I consider are very important knowledge for every game that I struggled with in the past. All the scripts will only be in GDscript sorry C# users I don't know about that coding language.[/i]
+
+[url=link1]SECTION 1. AUTOLOADS[/url] [i]Persistant Data Across Scenes[/i]
+
+[url=link2]SECTION 2. SAVE & LOAD[/url] [i]Godot's in-built Saving & Loading Data[/i]
+
+[url=link3]SECTION 3. PAUSE MENU[/url] [i]Instancing Scenes[/i]
+
+[url=link4]SECTION 4. RNG NUMBER[/url] [i]Randomizing Events[/i]
+
+[i]I choose to talk about these four sections, because I think that they are very important needed for pretty much every game. Autoloads help with sharing variables across scenes or accessing certain scripts like a Pause Menu or Scene Transition. Saving & Loading... I have a love-hate relationship with this I love how useful it is and hate for how hard it was to understand this. For me it took about 3 months to have a working Save & Load provided what I wanted was advanced. Essentially with Saving & Loading you want to Write data to file, Read data from file, Update scene with loaded data. Pause Menu is a way to instance scenes using an Autoload script so you only have to write it once and can access in mulitple scenes. Finally RNG number I gave a few examples that can help one understand how to use it with GDscript.[/i]
+
+
+
+[right][url=quit]QUIT GAME[/url]"
+fit_content = true
+meta_underlined = false
+
+[connection signal="meta_clicked" from="PanelContainer/VBoxContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

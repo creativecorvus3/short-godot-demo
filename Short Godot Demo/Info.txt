@@ -1,0 +1,16 @@
+# Save Folder
+Go to > Project > ProjectSettings > General > Advanced Settings
+Then to > Application > Config > Use Custom User Dir activate it
+I use the game's name for custom dir, here is where the saves folder will be at
+
+
+# Input Map
+Go to > Project > ProjectSettings > Input Map > Add New Action 
+you name this something like "left", "right" and on the right
+side is a plus sign click it and add the corresponding keys you
+want to be assigned to the action you named
+
+
+# Autoload
+Go to > Project > ProjectSettings > Autoloads here you can add
+the scenes, scripts, etc. that you need for access across the game
